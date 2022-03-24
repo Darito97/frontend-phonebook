@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 import PhoneNumber from './components/PhoneNumber/PhoneNumber'
+import Header from './components/Header/Header.jsx'
 
 function App() {
   const [phoneNumbers, setPhoneNumbers] = useState([])
@@ -21,7 +22,8 @@ function App() {
   }, [])
   return (
     <main className="App">
-      {phoneNumbers.map(phone => <PhoneNumber phone={phone} />)}
+      <Header />
+      {phoneNumbers.map(phone => <PhoneNumber key={phone.id + phone.name} phone={phone} />)}
     </main>
   )
 }
