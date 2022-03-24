@@ -4,6 +4,7 @@ import axios from 'axios'
 
 import PhoneNumber from './components/PhoneNumber/PhoneNumber'
 import Header from './components/Header/Header.jsx'
+import FormToAddNumber from './components/FormToAddNumber/FormToAddNumber'
 
 function App() {
   const [phoneNumbers, setPhoneNumbers] = useState([])
@@ -24,6 +25,7 @@ function App() {
     <main className="App">
       <Header />
       {phoneNumbers.map(phone => <PhoneNumber key={phone.id + phone.name} phone={phone} />)}
+      <FormToAddNumber />
     </main>
   )
 }
