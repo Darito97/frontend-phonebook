@@ -1,0 +1,19 @@
+.form {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+.form__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  border: transparent;
+}
+.form__button-open{
+  transform: rotate(45deg);
+}
