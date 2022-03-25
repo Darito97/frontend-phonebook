@@ -1,0 +1,12 @@
+.header {
+  text-align: center;
+  padding: 20px 10px;
+  color: white;
+}
+.header__title{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.header__subtitle{
+  font-weight: 400;
+}
