@@ -24,7 +24,9 @@ function App() {
   return (
     <main className="App">
       <Header />
-      {phoneNumbers.map(phone => <PhoneNumber key={phone.id + phone.name} phone={phone} />)}
+      <section className="phoneNumbers">
+        {phoneNumbers.map(phone => <PhoneNumber key={phone.id + phone.name} phone={phone} />)}
+      </section>
       <FormToAddNumber />
     </main>
   )
