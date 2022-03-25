@@ -1,10 +1,11 @@
+import './PhoneNumber.css'
 
 function PhoneNumber({ phone }) {
   const { id, name, phoneNumber } = phone;
   return (
-    <article>
-      <p>{name}</p>
-      <p>{phoneNumber}</p>
+    <article className="phone-number">
+      <p className="phone-number__name">{name}</p>
+      <p className="phone-number__number">{phoneNumber}</p>
     </article>
   )
 }
