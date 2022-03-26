@@ -5,9 +5,11 @@ import axios from 'axios'
 import PhoneNumber from './components/PhoneNumber/PhoneNumber'
 import Header from './components/Header/Header.jsx'
 import FormToAddNumber from './components/FormToAddNumber/FormToAddNumber'
+import Notification from './components/Notification/Notification'
 
 function App() {
   const [phoneNumbers, setPhoneNumbers] = useState([])
+  const [textOfNotification, setTextOfNotification] = useState('')
   async function changeDataWithServerInfo() {
     const promise = axios.get(import.meta.env.VITE_SERVER + '/api/phonenumbers')
     promise.then(response => {
@@ -20,6 +22,12 @@ function App() {
   function updateList() {
     changeDataWithServerInfo()
   }
+  function showNotification(text) {
+    setTextOfNotification(text)
+    setTimeout(() => {
+      setTextOfNotification('')
+    }, 2000)
+  }
   useEffect(() => {
     changeDataWithServerInfo()
   }, [])
@@ -29,7 +37,11 @@ function App() {
       <section className="phoneNumbers">
         {phoneNumbers.map(phone => <PhoneNumber key={phone.id + phone.name} phone={phone} />)}
       </section>
-      <FormToAddNumber updateList={() => updateList()} />
+      <FormToAddNumber updateList={() => updateList()} showNotification={(text) => showNotification(text)} />
+      {textOfNotification !== ''
+        ? <Notification text={textOfNotification} />
+        : ''
+      }
     </main>
   )
 }

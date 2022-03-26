@@ -1,0 +1,40 @@
+.notification {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 5;
+
+  padding: 10px;
+}
+.notification__text {
+  padding: 10px;
+
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #141414;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  color: #141414;
+  text-align: center;
+
+  animation: notification-appear-and-disappear 2s ease-in-out;
+}
+@keyframes notification-appear-and-disappear {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
