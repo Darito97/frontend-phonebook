@@ -35,7 +35,7 @@ function App() {
     <main className="App">
       <Header />
       <section className="phoneNumbers">
-        {phoneNumbers.map(phone => <PhoneNumber key={phone.id + phone.name} phone={phone} />)}
+        {phoneNumbers.map(phone => <PhoneNumber key={phone.id + phone.name} phone={phone} updateList={() => updateList()} showNotification={(text) => showNotification(text)} />)}
       </section>
       <FormToAddNumber updateList={() => updateList()} showNotification={(text) => showNotification(text)} />
       {textOfNotification !== ''

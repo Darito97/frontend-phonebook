@@ -1,12 +1,27 @@
 .phone-number {
-  padding: 10px 18px;
+  display: grid;
+  grid-template-columns: 3fr 30px;
+  gap: 10px;
+
   background-color: #141414;
   border-radius: 4px;
   color: #fff;
 }
-.phone-number__number {
+.phone-number__info-phone-number {
+  padding: 10px 5px 10px 12px;
+}
+.info-phone-number__number {
   color: #a6a6a6;
   font-size: 15px;
   text-align: right;
 }
+.phone-number__delete-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 0;
+  border-left: 1px solid #232e3c;
+}
