@@ -13,7 +13,7 @@ function FormToAddNumber({ updateList, showNotification }) {
     }
   }
   function addNewNumber() {
-    axios.post(import.meta.env.VITE_SERVER + '/api/phonenumbers', {
+    axios.post(import.meta.env.VITE_URL_POST_PHONE_NUMBER, {
       name: nameInput,
       phoneNumber: numberInput
     }).then(res => {

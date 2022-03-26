@@ -11,7 +11,7 @@ function App() {
   const [phoneNumbers, setPhoneNumbers] = useState([])
   const [textOfNotification, setTextOfNotification] = useState('')
   async function changeDataWithServerInfo() {
-    const promise = axios.get(import.meta.env.VITE_SERVER + '/api/phonenumbers')
+    const promise = axios.get(import.meta.env.VITE_URL_GET_PHONE_NUMBERS)
     promise.then(response => {
       setPhoneNumbers(response.data)
       return
