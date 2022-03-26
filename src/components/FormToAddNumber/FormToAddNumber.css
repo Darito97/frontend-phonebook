@@ -24,7 +24,8 @@
 
   background-color: #fff;
   border-radius: 8px 8px 0 0;
-
+}
+.fadeUp {
   animation: fadeUp 0.3s ease-in-out;
 }
 @keyframes fadeUp {
@@ -39,6 +40,7 @@
 }
 .fadeDown {
   animation: fadeDown 0.3s ease-in-out;
+  opacity: 0;
 }
 @keyframes fadeDown {
   0% {
@@ -73,6 +75,13 @@
 
   border-color: #141414;
   border-width: 0 0 1px 0;
+}
+.input--section__span {
+  padding-top: 5px;
+  padding-left: 5px;
+
+  font-size: 12px;
+  color: #b71c1c;
 }
 .form__button--submit {
   width: 100%;
