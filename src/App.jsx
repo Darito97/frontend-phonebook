@@ -17,7 +17,9 @@ function App() {
       console.log(error)
     })
   }
-
+  function updateList() {
+    changeDataWithServerInfo()
+  }
   useEffect(() => {
     changeDataWithServerInfo()
   }, [])
@@ -27,7 +29,7 @@ function App() {
       <section className="phoneNumbers">
         {phoneNumbers.map(phone => <PhoneNumber key={phone.id + phone.name} phone={phone} />)}
       </section>
-      <FormToAddNumber />
+      <FormToAddNumber updateList={() => updateList()} />
     </main>
   )
 }
