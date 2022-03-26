@@ -13,10 +13,6 @@ function FormToAddNumber() {
     }
   }
   function addNewNumber() {
-    const newPhoneNumber = {
-      name: nameInput,
-      phoneNumber: numberInput
-    }
     axios.post(import.meta.env.VITE_SERVER + '/api/phonenumbers', {
       name: nameInput,
       phoneNumber: numberInput
