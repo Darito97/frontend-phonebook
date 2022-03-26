@@ -14,12 +14,6 @@
   border-radius: 50%;
   border: transparent;
 }
-.content--form__close--button {
-  transform: rotate(45deg);
-
-  background-color: transparent;
-  border: none;
-}
 .content--form {
   position: fixed;
   bottom: 0;
@@ -55,4 +49,38 @@
     transform: translateY(100%);
     opacity: 0;
   }
+}
+.content--form__close--button--box {
+  text-align: right;
+}
+
+.close--button--box__close--button {
+  transform: rotate(45deg);
+
+  background-color: transparent;
+  border: none;
+}
+.form__input--section {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+.input--section__label {
+  padding-bottom: 5px;
+}
+.input--section__input {
+  padding: 5px 7px;
+
+  border-color: #141414;
+  border-width: 0 0 1px 0;
+}
+.form__button--submit {
+  width: 100%;
+  padding: 7px;
+
+  background-color: #141414;
+  border-color: transparent;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
 }

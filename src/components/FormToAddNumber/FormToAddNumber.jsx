@@ -24,16 +24,18 @@ function FormToAddNumber() {
       </button>
       :
       <div className='content--form'>
-        <button className='content--form__close--button' onClick={() => closeOrOpen()}>
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
-        </button>
+        <div className='content--form__close--button--box'>
+          <button className='close--button--box__close--button' onClick={() => closeOrOpen()}>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+          </button>
+        </div>
         <form className='content--form__form' onSubmit={e => submit(e)}>
           <section className='form__input--section'>
-            <label className='input--section__label' htmlFor="name">Ingresa el nombre:</label>
+            <label className='input--section__label' htmlFor="name">Nombre de contacto:</label>
             <input className='input--section__input' onChange={(input) => setNameInput(input.target.value)} value={nameInput} name='name' type='text' placeholder='Ingresa el nombre' minLength='1' />
           </section>
           <section className='form__input--section'>
-            <label className='input--section__label' htmlFor="number">Ingresa el numero:</label>
+            <label className='input--section__label' htmlFor="number">Numero:</label>
             <input className='input--section__input' onChange={(input) => setNumberInput(input.target.value)} value={numberInput} name='number' type='number' placeholder='Ingresa el numero' minLength='6' maxLength='13' />
           </section>
           <button className='form__button--submit' type='submit'>
