@@ -2,7 +2,7 @@ import './FormToAddNumber.css'
 import { useState, useRef, createRef } from 'react'
 import axios from 'axios'
 
-function FormToAddNumber() {
+function FormToAddNumber({ updateList }) {
   const [isClose, setIsClose] = useState(true)
   const boxForm = createRef()
   function submit(e) {
@@ -16,8 +16,9 @@ function FormToAddNumber() {
     axios.post(import.meta.env.VITE_SERVER + '/api/phonenumbers', {
       name: nameInput,
       phoneNumber: numberInput
-    }).then(response => console.log(response))
-      .catch(error => console.error(error))
+    }).then(() => {
+      updateList()
+    }).catch(error => console.error(error))
   }
   function closeOrOpen() {
     if (!isClose) {
