@@ -26,7 +26,7 @@ function App() {
     setTextOfNotification(text)
     setTimeout(() => {
       setTextOfNotification('')
-    }, 2000)
+    }, 1900)
   }
   useEffect(() => {
     changeDataWithServerInfo()
