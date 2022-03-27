@@ -3,6 +3,9 @@
   grid-template-columns: 3fr 30px;
   gap: 10px;
 
+  width: 100%;
+  max-width: 400px;
+
   background-color: #141414;
   border-radius: 4px;
   color: #fff;
@@ -24,4 +27,19 @@
   border-color: transparent;
   border-radius: 0;
   border-left: 1px solid #232e3c;
+}
+@media only screen and (min-width: 800px) {
+  .phone-number {
+    grid-template-columns: 3fr 40px;
+  }
+  .info-phone-number__name {
+    font-size: 19px;
+  }
+  .info-phone-number__number {
+    font-size: 17px;
+  }
+  .delete-button__delete-icon {
+    width: 30px;
+    height: 30px;
+  }
 }

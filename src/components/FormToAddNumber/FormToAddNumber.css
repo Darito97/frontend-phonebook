@@ -93,3 +93,35 @@
   color: #fff;
   font-weight: bold;
 }
+@media only screen and (min-width: 600px) {
+  .button--open {
+    bottom: 30px;
+    right: 30px;
+
+    width: 45px;
+    height: 45px;
+  }
+  .button--open__add-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .close--button__add-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .content--form {
+    left: 25%;
+    right: 25%;
+
+    padding: 30px;
+  }
+  .input--section__label {
+    font-size: 18px;
+  }
+  .input--section__input {
+    font-size: 16px;
+  }
+  .form__button--submit {
+    font-size: 17px;
+  }
+}

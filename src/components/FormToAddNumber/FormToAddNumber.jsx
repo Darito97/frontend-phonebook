@@ -1,6 +1,7 @@
 import './FormToAddNumber.css'
 import { useState, useRef, createRef } from 'react'
 import axios from 'axios'
+import addIcon from '../../resources/icons/add.svg'
 
 function FormToAddNumber({ updateList, showNotification }) {
   const [isClose, setIsClose] = useState(true)
@@ -42,13 +43,13 @@ function FormToAddNumber({ updateList, showNotification }) {
   return (
     isClose ?
       <button className='button--open' onClick={() => closeOrOpen()}>
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+        <img className='button--open__add-icon' src={addIcon} alt="add icon" />
       </button>
       :
       <div ref={boxForm} className='content--form fadeUp'>
         <div className='content--form__close--button--box'>
           <button className='close--button--box__close--button' onClick={() => closeOrOpen()}>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+            <img className='close--button__add-icon' src={addIcon} alt="add icon" />
           </button>
         </div>
         <form className='content--form__form' onSubmit={e => submit(e)}>
